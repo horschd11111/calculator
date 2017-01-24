@@ -168,6 +168,41 @@ public class Main {
     	 * Füge Sie dem pnlOperators hinzu
     	 */
     	
+    	JButton btnAdd = new JButton(new AbstractAction("+"){
+    		public void actionPerformed(ActionEvent e){
+    			operatorPressed('+');
+    		}
+    	});
+    	
+    	JButton btnSub = new JButton(new AbstractAction("-"){
+    		public void actionPerformed(ActionEvent e){
+    			operatorPressed('-');
+    		}
+    	});
+    	
+    	JButton btnMul = new JButton(new AbstractAction("*"){
+    		public void actionPerformed(ActionEvent e){
+    			operatorPressed('*');
+    		}
+    	});
+    	
+    	
+    	JButton btnDiv = new JButton(new AbstractAction("/"){
+    		public void actionPerformed(ActionEvent e){
+    			operatorPressed('/');
+    		}
+    	});
+    	
+    	btnAdd.setForeground(Color.RED);
+    	btnSub.setForeground(Color.RED);
+    	btnMul.setForeground(Color.RED);
+    	btnDiv.setForeground(Color.RED);
+    	
+    	pnlOperators.add(btnAdd);
+    	pnlOperators.add(btnSub);
+    	pnlOperators.add(btnMul);
+    	pnlOperators.add(btnDiv);
+    	
     	// show frame
     	
     	frame.setVisible(true);
