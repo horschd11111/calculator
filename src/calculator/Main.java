@@ -21,6 +21,11 @@ public class Main {
 		RESULT
 	}
 	
+	/**
+	 * Hauptprogramm.
+	 * 
+	 * @param args Kommandozeilenparamter
+	 */
 	public static void main(String[] args) {
 		new Main();
 	}
@@ -29,6 +34,9 @@ public class Main {
     	createGUI();
     }
     
+    /**
+     * Berechnet das Ergebnis und zeigt es im Display an.
+     */
     private void showResult() {
     	if (state == State.VALUE_2 && !display.getText().isEmpty()) {
     		
@@ -45,6 +53,11 @@ public class Main {
     	}
     }
 
+    /**
+     * Wird aufgerufen, wenn Operator Button gedrückt wird.
+     * 
+     * @param op Operator
+     */
     public void operatorPressed(char op) {
     	if (!display.getText().isEmpty()) {
     		operator = op;
@@ -55,6 +68,11 @@ public class Main {
     	}
     }
     
+    /**
+     * Wird aufgerufen, wenn Nummer Button gedrückt wird.
+     * 
+     * @param value Wert 
+     */
     public void numberPressed(int value) {
     	if (state == state.RESULT) {
     		display.setText("");
@@ -64,6 +82,9 @@ public class Main {
     	display.setText(display.getText().concat(Integer.toString(value)));
     }
     
+    /**
+     * Wird aufgerufen, wenn Punkt Button gedrückt wird.
+     */
     public void pointPressed() {
     	if (!display.getText().isEmpty() && !decimal) {
 			display.setText(display.getText().concat("."));
@@ -71,6 +92,9 @@ public class Main {
 		}
     }
     
+    /**
+     * Erstellt die Oberfläche.
+     */
     public void createGUI() {
     	// create frame
     	
