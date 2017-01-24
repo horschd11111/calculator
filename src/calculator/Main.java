@@ -48,7 +48,18 @@ public class Main {
     		 * mit value1 und value2 durch
     		 * gebe das Ergebnis im display aus
     		 */
-    		
+    		double result = 0;
+    		switch(operator) {
+    		case '+':	result = (value1 + value2);
+    					break;
+    		case '-': 	result = (value1 - value2);
+    					break;
+    		case '*':   result = (value1 * value2);
+    					break;
+    		case '/': 	result = (value1 / value2);
+    					break;
+    		}
+    		display.setText("" + result);
     		
     	}
     }
